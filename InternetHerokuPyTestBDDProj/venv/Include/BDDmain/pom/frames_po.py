@@ -7,8 +7,8 @@ class FramesPO():
     leftFrameText = (By.CSS_SELECTOR,"body")
     middleFrameText = (By.ID,"content")
     bottomFrameText = (By.CSS_SELECTOR,"body")
-    topFrame = (By.NAME,"frame-top")
-    leftFrame = (By.NAME,"frame-left")
+    topFrame = "frame-top"
+    leftFrame = "frame-left"
     middleFrame = (By.NAME,"frame-middle")
     bottomFrame = (By.NAME,"frame-bottom")
     iFrame = (By.ID,"mce_0_ifr")

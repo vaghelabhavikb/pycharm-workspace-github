@@ -20,7 +20,7 @@ def switch_frame(browser):
 
 @then('we are able to interact with the element present in the frame')
 def correct_page_content(browser):
-    assert webdriverlib.wait_for_visibility_of_element(FramesPO.leftFrameText).text == "LEFT"
+    assert webdriverlib.wait_for_visibility_of_element(browser, FramesPO.leftFrameText).text == "LEFT"
 
 
 
