@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.remote.webelement import WebElement
 
 def wait_for_visibility_of_element(browser, by):
     return WebDriverWait(browser, 10).until(expected_conditions.visibility_of_element_located((by)))
@@ -41,3 +42,6 @@ def select_value(browser, by ,value):
 def get_selected_value(browser, by):
     return Select(wait_for_visibility_of_element(browser, by)).first_selected_option.text
 
+def send_text(browser, by, text):
+    ele = wait_for_visibility_of_element(browser, by)
+    ele.send_keys(text)
